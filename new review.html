@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Memory Makers</title>
+    <link href="images/logo.jpg" rel="icon" type="image/x-icon" >
+    <link rel="stylesheet" href="new review.css">
+ 
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+
+            <img src="images/logo.jpg" width="50" height="50" class="logo">
+            <i class="fa fa-times"></i>
+            <div class="nav-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="new services page.html">Services</a></li>
+              <li><a href="new about page.html">About Us</a></li>
+              <li><a href="new gallary page.html">Gallery</a></li>
+              <li><a href="new price page.html">price</a></li>
+              <li><a href="new review.html">review</a></li>
+              <li><a href="new contact.html">Contact Us</a></li>
+                </ul>
+        </div>
+    </div>
+ </div>
+ <style>
+    body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+   /* background: linear-gradient(to right, #3498db, #2c3e50); /* Updated background gradient */
+    color: white; /* Light text color */
+  }
+
+  header {
+    background-color: #487a9b; /* Updated header background color */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(157, 164, 172, 0.8); /* Updated background color */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    color: white;
+  }
+
+  .review {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #34495e; /* Updated border color */
+    padding-bottom: 15px;
+  }
+
+  .user-info {
+    font-style: italic;
+    color:white/* Light text color for user info */
+  }
+
+  .rating {
+    color: #f39c12;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white; /* Updated border color */
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  button {
+    background-color: #001f3f;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color:/* #2980b9;*/#003366;
+  }
+
+  /* Styling for the colorful star buttons */
+  .rating-buttons {
+    margin-top: 10px;
+  }
+
+  .star-button {
+    font-size: 20px;
+    background: #34495e; /* Updated button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .star-button:hover {
+    background-color: #2980b9; /* Highlight color on hover */
+  }
+
+  .star-button:focus {
+    outline: none; /* Remove focus outline for better styling */
+  }
+ </style>
+ <div class="content">
+    <h1>reviews</h1>
+    <p>Creating Memorable Events Tailored To The Client.</p>
+    
+</div>
+<section>
+    <h2>Customer reviews</h2>
+    <a href="displayreview.php"><button type="submit">See more</button></a>
+    <p>&nbsp;</p>
+
+    <!-- Sample review -->
+    <div class="review">
+      <p class="user-info">Manuthi Gamlath - November 19, 2023</p>
+      <span class="stars" data-rating="5"></span>
+      <p>Highly recommended for any event</p>
+  </div>
+
+    <!-- Repeat the structure for other reviews -->
+
+    <h2>Leave your Review</h2>
+    <p>&nbsp;</p>
+  <form action="review.php" method="post">
+    <p>
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label for="Date">Date:</label>
+        <input type="text" id="Date" name="Date" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label for="event">Event:</label>
+        <input type="text" id="event" name="event" required>
+      </p>
+
+      <p>
+ 
+        <label for="review">Your Review:</label>
+        <textarea id="review" name="review" rows="4" required></textarea>
+        
+      </p>
+      <button type="submit">Submit Review</button>
+    </form>
+</section>
+	
+	<!--<div class="text-center col-lg-6 offset-lg-3">
+              <h4>Footer</h4>
+             <p>Copyright &copy; 2015 &middot; All Rights Reserved &middot; <a href="#" >My Website</a></p>
+          </div>
+       </div>-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+  </body>
+</html>
+
+	
+	
+
+  <!-- JavaScript for star ratings -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const stars = document.querySelectorAll('.stars');
+      stars.forEach(star => {
+        const rating = parseInt(star.dataset.rating, 10);
+        star.innerHTML = '&star;'.repeat(rating);
+      });
+
+      const starButtons = document.querySelectorAll('.star-button');
+      starButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          document.getElementById('rating').value = this.dataset.rating;
+        });
+      });
+    });
+  </script>
+        
+         
+       
+        <footer>
+          <div class="footercontainer">
+              <div class="socialicons">
+                  <a href="https://www.whatsapp.com"><img src="images/whatsapp.png" width="32" height="32" alt=""/></a>&nbsp;&nbsp;&nbsp;
+              <a href="https://www.facebook.com"><img src="images/facebook.png" width="32" height="32" alt=""/></a>&nbsp;&nbsp;&nbsp;
+              <a href="https://www.instegram.com"><img src="images/instagram.png" width="32" height="32" alt=""/></a>&nbsp;&nbsp;&nbsp;
+              <a href="https://www.youtube.com"><img src="images/youtube.png" width="32" height="32" alt=""/></a>&nbsp;&nbsp;&nbsp;
+              <a href="https:www.nsbm.ac.lk"><img src="images/nsbm.png" width="32" height="32" alt=""/>
+                      </a>
+                  </div>
+                  <div class="footerNav" >
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                      <li><a href="new services page.html">Services</a></li>
+                      <li><a href="new about page.html">About Us</a></li>
+                      <li><a href="new gallary page.html">Gallery</a></li>
+                      <li><a href="new price page.html">price</a></li>
+                      <li><a href="new review.html">review</a></li>
+                      <li><a href="new contact.html">Contact Us</a></li>
+                          </ul><br><br> &nbsp;&nbsp;&nbsp;
+                     <center> <p style="color: black;">Copyright @ 2023 All rights reserved</p></center>
+                  </div>
+                  <!--<div class="footerBottom">
+                      <p style="color: black;">Copyright @ 2023 All rights reserved</p>
+                  </div>-->
+          </div>   
+      </footer>      
+
+    </body>
+    </html>
